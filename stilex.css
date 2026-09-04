@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    padding: 30px;
+}
+
+
+/* ========================= */
+/* CONTENEDOR PRINCIPAL */
+/* ========================= */
+
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ========================= */
+/* SECCIÓN CONVERSOR */
+/* ========================= */
+
+.conversor {
+    background: white;
+    border: 2px solid #222;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 0px #222;
+}
+
+.conversor h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+/* CONTENIDO DEL CONVERSOR */
+
+.conversor-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+
+/* FORMULARIO */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+
+/* MONEDAS */
+
+.monedas {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    align-items: end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.intercambiar {
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #3478db;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.intercambiar:hover {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+
+/* BOTÓN CONVERTIR */
+
+.btn-convertir {
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #3478db;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-convertir:hover {
+    background: #245fae;
+}
+
+
+/* ========================= */
+/* RESULTADO */
+/* ========================= */
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resultado h2 {
+    text-align: center;
+    color: #3478db;
+    margin-bottom: 15px;
+}
+
+.resultado-caja {
+    border: 3px solid #3ca35c;
+    border-radius: 15px;
+    padding: 30px;
+    background: #f4fff6;
+    text-align: center;
+}
+
+#textoResultado {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#tipoCambio {
+    font-size: 14px;
+    color: #555;
+}
+
+.mensaje {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+
+/* ========================= */
+/* SECCIÓN PEGATINAS */
+/* ========================= */
+
+.pegatinas {
+    background: white;
+    border: 2px solid #222;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 5px 5px 0px #222;
+}
+
+
+/* TÍTULO */
+
+.titulo-pegatinas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.titulo-pegatinas h2 {
+    font-size: 30px;
+}
+
+.titulo-pegatinas p {
+    margin-top: 8px;
+    color: #666;
+}
+
+
+/* BOTÓN BORRAR */
+
+.btn-borrar {
+    padding: 12px 18px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-borrar:hover {
+    background: #eee;
+}
+
+
+/* ========================= */
+/* PEGATINAS */
+/* ========================= */
+
+.contenedor-pegatinas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* UNA PEGATINA */
+
+.pegatina {
+    min-height: 220px;
+    padding: 20px;
+    border: 3px solid #333;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    box-shadow: 4px 4px 0px #ccc;
+    transform: rotate(-1deg);
+}
+
+.pegatina:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.pegatina:hover {
+    transform: scale(1.04) rotate(0deg);
+    transition: 0.2s;
+}
+
+
+/* BANDERA */
+
+.bandera {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+/* MONEDA */
+
+.pegatina h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+
+/* VALOR */
+
+.valor {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+/* INFORMACIÓN */
+
+.info {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+}
+
+
+/* PEGATINA NUEVA */
+
+.nueva {
+    position: absolute;
+    top: -12px;
+    left: -10px;
+    background: #48a868;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    .conversor-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-pegatinas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .conversor,
+    .pegatinas {
+        padding: 20px;
+    }
+
+    .monedas {
+        grid-template-columns: 1fr;
+    }
+
+    .intercambiar {
+        margin: 10px auto;
+    }
+
+    .contenedor-pegatinas {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-pegatinas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
